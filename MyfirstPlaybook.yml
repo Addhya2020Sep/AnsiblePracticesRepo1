@@ -34,20 +34,20 @@
 
   - name: i want to install webserver on redhat
     yum:
-      name: httpd
+      name: "{{myredhatsever}}"
       state: present
     when: ansible_os_family =="RedHat"
 
   - name: i want to start webserver on redhat
     service:
-       name: httpd
+       name: "{{myredhatsever}}"
        state: started
     when: ansible_os_family =="RedHat"
 
 
   - name: i want to install webserver on ubuntu
     apt:
-      name: apache2
+      name: "{{myubuntuserver}}"
       state: present
     when: ansible_os_family =="Debian"       
 

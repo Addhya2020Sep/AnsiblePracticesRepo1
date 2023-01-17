@@ -8,3 +8,7 @@
 
 [dbservers]
 123.32.13.17
+
+[webservers:vars]
+myubuntuserver=apache2
+myredhatsever=httpd
