@@ -6,16 +6,27 @@
     apt: 
       name: git
       state: present
+    when: ansible_os_family =="Debian"
 
   - name: i want to install tree on ubuntu
     apt:
       name: tree
       state: present
+    when: ansible_os_family =="Debian"  
 
   - name: i want to install wget on ubuntu
     apt: 
       name: wget
       state: present
-      
-          
+    when: ansible_os_family =="Debian"
+
+  - name: i want to install git on redhat
+    yum:
+      name: git
+      state: present
+    when: ansible_os_family =="RedHat"      
+
+
+
+
 
