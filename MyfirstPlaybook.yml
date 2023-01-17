@@ -12,3 +12,10 @@
       name: tree
       state: present
 
+  - name: i want to install wget on ubuntu
+    apt: 
+      name: wget
+      state: present
+      
+          
+
