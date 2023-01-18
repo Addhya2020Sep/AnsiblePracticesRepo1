@@ -4,7 +4,7 @@
   tasks:
   - name: i want to install git on ubuntu
     apt: 
-      name: git
+      name: "{{mygit}}"
       state: present
     when: ansible_os_family =="Debian"
 
