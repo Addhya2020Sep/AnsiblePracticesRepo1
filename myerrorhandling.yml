@@ -14,7 +14,7 @@
       name: git
       staterr: present
     when: ansible_os_family =="Debian"  
-    ignore_errors: yes
+    
 
   - name: i want to install git on redhat
     yum:
