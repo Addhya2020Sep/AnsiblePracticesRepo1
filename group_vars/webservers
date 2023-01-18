@@ -2,3 +2,4 @@
 
 myubuntuserver: apache2
 myredhatsever: httpd
+myjavapackredhat: java-1.8.0-openjdk
