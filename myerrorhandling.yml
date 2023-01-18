@@ -1,0 +1,30 @@
+---
+- hosts: webservers
+  become: yes
+  tasks:
+  - name: i want to install java on ubuntu
+    apt:
+      name: 
+      state: present
+    when: ansible_os_family =="Debian"
+    ignore_errors: yes
+
+  - name: i want to install git on ubuntu
+    apt:
+      name: git
+      staterr: present
+    when: ansible_os_family =="Debian"  
+    ignore_errors: yes
+
+  - name: i want to install git on redhat
+    yum:
+      name: git
+      state: present
+    when: ansible_os_family =="RedHat"
+    ignore_errors: yes    
+
+
+
+
+
+
