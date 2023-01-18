@@ -15,3 +15,9 @@
       name: git
       state: present
     when: myresult.stderr =="" 
+
+  - name: i want to install wget on ubuntu
+    apt:
+      name: wget
+      state: present
+    when: myresult.stderr !=""    
