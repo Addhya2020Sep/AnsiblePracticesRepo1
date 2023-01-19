@@ -18,12 +18,23 @@
      when: ansible_os_family =="Debian"
      notify: restart_server
 
-   - name: copy static file into ansible node
+   - name: copy dyno file into ansible node
      template:
          src: dynofile.js2
          dest: /var/www/html/index.html
      when: ansible_os_family =="Debian"
      notify: restart_server
+
+
+   - name: i wan to download remote file 
+     get_url:
+        url: https://archive.apache.org/dist/tomcat/tomcat-8/v8.0.15/bin/apache-tomcat-8.0.15.tar.gz
+        dest: /home/ubuntu/apache-tomcat-8.0.15.tar.gz
+     force_basic_auth: yes
+     when: ansible_os_family =="Debian"
+     notify: restart_server  
+
+
 
 
      
