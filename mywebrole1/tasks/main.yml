@@ -1,2 +1,8 @@
 ---
 # tasks file for mywebrole1
+- include_tasks: createuser.yml
+- include_tasks: installjava.yml
+- include_tasks: downloadtarfile.yml
+- include_tasks: adminpermission.yml
+- include_tasks: admindashboard.yml
+- include_tasks: starttomcat.yml
