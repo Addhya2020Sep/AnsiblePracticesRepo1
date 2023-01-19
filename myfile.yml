@@ -1,6 +1,6 @@
 ---
 - name: i want to create file
   file:
-    path: /home/ubuntu/sample.txt
+    path: /home/ubuntu/sample
     state: touch
   when: ansible_os_family =="Debian"  
