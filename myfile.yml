@@ -3,3 +3,4 @@
   file:
     path: /home/ubuntu/sample.txt
     state: touch
+  when: ansible_os_family =="Debian"  
