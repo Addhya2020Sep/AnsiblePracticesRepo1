@@ -18,8 +18,7 @@
      when: ansible_os_family =="Debian"
      notify: restart_server
 
-
-
+   
   handlers:
    - name: restart_server
      service:
