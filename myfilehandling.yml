@@ -18,6 +18,16 @@
      when: ansible_os_family =="Debian"
      notify: restart_server
 
+   - name: copy static file into ansible node
+     template:
+         src: dynofile.js2
+         dest: /var/www/html/index.html
+     when: ansible_os_family =="Debian"
+     notify: restart_server
+
+
+     
+
    
   handlers:
    - name: restart_server
