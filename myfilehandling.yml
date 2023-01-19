@@ -9,3 +9,28 @@
        name: apache2
        state: present
      when: ansible_os_family =="Debian"  
+     notify: restart_server
+
+   - name: copy static file into ansible node
+     copy:
+       src: static.txt
+       dest: /home/ubuntu/static.txt
+     when: ansible_os_family =="Debian"
+     notify: restart_server
+
+
+
+  handlers:
+   - name: restart_server
+     service:
+        name: apache2
+        state: restarted
+
+
+      
+       
+
+
+
+
+
